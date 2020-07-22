@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    font-size: 1rem;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+
+
+    &-thumb {
+        background-color: #999;
+    
+        &:hover {
+            background-color: #777;
+        }
+    }
+}
+
+
+body {
+    width: calc(100vw - 10px);
+    min-height: 100vh;   
+}

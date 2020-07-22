@@ -45,20 +45,13 @@
                 </tbody>
             </table>
         </main>
-        <div class="bg-white pl-4 border-t-2 border-gray-300">
-            {{-- <form action="route()" method="get"></form> --}}
-            {{ $members->links() }}
-        </div>
+        <div class="bg-white pl-4 border-t-2 border-gray-300">{{ $members->links() }}</div>
     </div>
-    {{-- <Modal title="hmm">
-        <profile-modalBody></profile-modalBody>
-    </Modal> --}}
 </div>
 
 @include('member._modal-profile')
-        
-@endsection
 
+@endsection
 @push('script')
 <script defer>
     let profiles

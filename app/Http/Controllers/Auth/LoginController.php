@@ -52,4 +52,13 @@ class LoginController extends Controller
     {
         return 'name';
     }
+
+//     public function getAuthenticatedUser(Request $request)
+//     {
+//         // dd($request);
+//         if ($authenticated = Auth::user()) {
+//             return response()->json($authenticated->attributesToArray());
+//         }
+//         return response()->json(['error' => __('Not Logged in')]);
+//     }
 }

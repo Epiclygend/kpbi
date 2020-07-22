@@ -1,3 +1,10 @@
+window.responsiveBreakpoints = {
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+}
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -5,9 +12,11 @@
  */
 
 require('./bootstrap')
-window.detailModal = require('./script').default
-// window.Vue = require('vue');
+require('./init')
 
+import Vue from "vue"
+import App from "./App.vue"
+import router from "./router"
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -19,19 +28,14 @@ window.detailModal = require('./script').default
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-// Vue.component('modal', require('./components/Modal.vue').default);
-// Vue.component('profile-modalbody', require('./components/profileModalBody.vue').default);
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-// import Modal from "./components/Modal.vue";
+window.addEventListener('resize', window.drawerResponsive)
 
-// window.app = new Vue({
-//     el: '#app',
-//     components: {
-//         Modal
-//     }
-// });
+window.app = new Vue({
+    router,
+    render: h => h(App),
+}).$mount('#app')

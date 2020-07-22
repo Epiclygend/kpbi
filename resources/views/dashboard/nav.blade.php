@@ -24,7 +24,7 @@ $nav = function ($label, $link, $classes) {
 
 <nav class="flex justify-start items-stretch bg-blue-600 text-white">
 
-    <a href='{{ route('home') }}' class='btn bg-blue-600 hover:bg-blue-700 flex'>
+    <a href='{{ url('/members') }}' class='btn bg-blue-600 hover:bg-blue-700 flex'>
         <img src="{{ asset('img/ICON_KPBI_no-text.png') }}" class="w-12" alt="[icon_kpbi]">
         <span class="my-auto px-3 text-xl">KPBI</span>
     </a>

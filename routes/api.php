@@ -20,4 +20,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route::get('/user', 'KPBI\ProfileAPIController@getProfile')->middleware('api');
-// Route::get('/users', 'KPBI\ProfileAPIController@getAllProfiles')->middleware('api');
+Route::get('/users', 'KPBI\ProfileAPIController@getAllProfiles')->middleware('api');
+
+// Route::post('/authenticate', 'Auth\LoginController@login')->middleware('api');
+// Route::get('/authenticated', 'Auth\LoginController@getAuthenticatedUser')->middleware('api');

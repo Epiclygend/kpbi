@@ -1,18 +1,30 @@
-// // Fonts
-// @import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// // Variables
-// @import 'variables';
-
-// // Bootstrap
-// @import '~bootstrap/scss/bootstrap';
+@use "material-components-web/material-components-web";
 
 @import "components";
 
+div#app {
+    @apply h-full max-h-full w-full;
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    
+    &-track {
+        background: #eee;
+    }
+
+    &-thumb {
+        @apply rounded;
+        background: #999;
+        &:hover {
+            background: #bbb;
+        }
+    }
+}
+
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
 
-@import "utilities";
+// @import "style";

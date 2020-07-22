@@ -1,6 +1,6 @@
 <?php
 
-use App\KPBI;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,29 +15,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'home')->name('home');
+// Route::view('/', 'home')->name('home');
 
 Auth::routes([
     'register' => false,
     'verify' => true,
 ]);
 
-Route::get('/members', 'HomeController@members')->name('memberList');
+// Route::get('/members', 'HomeController@members')->name('memberList');
 Route::post('/register', 'KPBI\RegisterController@register');
 Route::get('/register', 'KPBI\RegisterController@showRegisterForm')->name('register');
 
 Route::group(['prefix' => 'my-profile', 'as' => 'profile'], function() {
-
     Route::get('/', 'DashboardController@myProfile');
     Route::post('/', 'DashboardController@saveProfile')->name(':update');
-
 });
-Route::group(['prefix' => 'my-account', 'as' => 'account'], function() {
 
+Route::group(['prefix' => 'my-account', 'as' => 'account'], function() {
     Route::get('/', 'DashboardController@myAccount');
     Route::post('/change-password', 'DashboardController@changePassword')->name(':change-password');
-
 });
+
+Route::get('/{vue_capture?}', function () {
+    return view('vue.app');
+})->where('vue_capture', '[\/\w\.-]*');
 
 
 // Route::get('/home', 'HomeController@index')->name('home');
