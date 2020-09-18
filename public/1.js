@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home/index.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************!*\
@@ -42,7 +42,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-container",
-    { attrs: { fluid: "" } },
     [_c("v-row", [_c("v-card", [_c("v-card-title", [_vm._v("Hmmm")])], 1)], 1)],
     1
   )
