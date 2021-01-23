@@ -1,7 +1,4 @@
 {
-  "include": [
-    "./resources/js/**/*"
-  ],
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
@@ -17,6 +14,15 @@
       "pages/*": [
         "resources/js/pages/*"
       ],
+      "api/*": [
+        "resources/js/api/*"
+      ],
     }
   },
+  "include": [
+    "./resources/js/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

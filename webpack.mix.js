@@ -22,6 +22,7 @@ mix.js('resources/js/app.js', 'public/js').vuetify()
         'js': __dirname + '/resources/js',
         'components': __dirname + '/resources/js/components',
         'pages': __dirname + '/resources/js/pages',
+        'api': __dirname + '/resources/js/api',
       },
     },
   })
