@@ -13,15 +13,15 @@ require('vuetifyjs-mix-extension');
  */
 
 mix.js('resources/js/app.js', 'public/js').vuetify()
-    .webpackConfig({
-        resolve: {
-            extensions: ['.js', '.vue', '.json'],
-            alias: {
-                'vue$': 'vue/dist/vue.esm.js',
-                'resources': __dirname + '/resources',
-                'js': __dirname + '/resources/js',
-                'components': __dirname + '/resources/js/components',
-                'pages': __dirname + '/resources/js/pages',
-            },
-        },
-    })
+  .webpackConfig({
+    resolve: {
+      extensions: ['.js', '.vue', '.json'],
+      alias: {
+        'vue$': 'vue/dist/vue.esm.js',
+        'resources': __dirname + '/resources',
+        'js': __dirname + '/resources/js',
+        'components': __dirname + '/resources/js/components',
+        'pages': __dirname + '/resources/js/pages',
+      },
+    },
+  })
