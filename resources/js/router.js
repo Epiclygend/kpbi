@@ -8,9 +8,15 @@ const router = new VueRouter({
 
   routes: [
     {
-      name: 'Home',
       path: '/',
-      component: () => import('js/pages/Home')
+      component: () => import('components/layouts/MainLayout'),
+      children: [
+        {
+          name: 'Home',
+          path: '',
+          component: () => import('pages/Home')
+        }
+      ]
     }
   ]
 });
